@@ -1,5 +1,6 @@
 import allure
 
+from locators.order_page_locators import OrderPageLocators
 from pages.base_page import BasePage
 
 
@@ -11,7 +12,7 @@ class OrderPage(BasePage):
 
     @allure.step("Fill last name field")
     def set_lastname_to_field(self, text):
-        self.set_text_to_element(OrderPageLocators.LAST_NAME_FLD_LOCATOR, text)
+        self.set_text_to_element(OrderPageLocators.LASTNAME_FLD_LOCATOR, text)
 
     @allure.step("Choose color for scooter")
     def  set_black_color(self):
@@ -30,8 +31,3 @@ class OrderPage(BasePage):
         self.set_lastname_to_field(lastname)
         self.set_black_color()
         self.click_to_order_button()
-
-class OrderPageLocators:
-    pass
-
-
