@@ -1,15 +1,9 @@
 from dataclasses import dataclass
 
-from faker import Faker
-
 
 class Urls:
     # Главная страница
     url_main = 'https://qa-scooter.praktikum-services.ru/'
-
-
-class LoginData:
-    pass
 
 
 @dataclass
@@ -41,3 +35,12 @@ class Answers:
 
     eight: str = "Да, обязательно. Всем самокатов! \И Москве, и Московской " \
                  "области."
+
+
+@dataclass()
+class Person:
+    name: str
+    lastname: str
+    adress: str
+    metro: str
+    phone: str

@@ -7,8 +7,8 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
-    def find_my_element(self, locator, time_out=5):
-        return Wait(self.driver, time_out).until(
+    def find_my_element(self, locator, timeout=5):
+        return Wait(self.driver, timeout).until(
             EC.visibility_of_element_located(locator))
 
     def click_to_element(self, locator, timeout=5):

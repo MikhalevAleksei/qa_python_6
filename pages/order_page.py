@@ -26,8 +26,8 @@ class OrderPage(BasePage):
     def check_success_order(self):
         return self.find_my_element(OrderPageLocators.ORDER_WINDOW)
 
-    def create_order(self, name, lastname):
-        self.set_name_to_field(name)
+    def create_order(self, first_name, lastname):
+        self.set_name_to_field(first_name)
         self.set_lastname_to_field(lastname)
         self.set_black_color()
         self.click_to_order_button()
