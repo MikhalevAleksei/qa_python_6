@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from helpers import generated_client, choose_rent_period, choose_metro_locator
+
 
 class Urls:
     # Главная страница
@@ -38,9 +40,10 @@ class Answers:
 
 
 @dataclass()
-class Person:
-    name: str
-    lastname: str
-    adress: str
-    metro: str
-    phone: str
+class Client:
+    first_name: str = None
+    last_name: str = None
+    address: str = None
+    metro: str = None
+    phone: str = None
+    period: str = None

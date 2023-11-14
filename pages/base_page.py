@@ -11,6 +11,11 @@ class BasePage:
         return Wait(self.driver, timeout).until(
             EC.visibility_of_element_located(locator))
 
+    def find_all_elements(self, locator, timeout=5):
+        return Wait(self.driver, timeout).until(
+            EC.visibility_of_all_elements_located(locator))
+
+
     def click_to_element(self, locator, timeout=5):
         Wait(self.driver, timeout).until(
             EC.element_to_be_clickable(locator))
@@ -18,3 +23,7 @@ class BasePage:
 
     def set_text_to_element(self, locator, text):
         self.driver.find_element(*locator).send_keys(text)
+
+    def get_text_from_element(self, locator):
+        text_element = self.driver.find_element(*locator).text
+        return text_element
