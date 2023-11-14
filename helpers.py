@@ -13,7 +13,7 @@ def generated_client():
     yield Client(
         first_name=faker_ru.first_name(),
         last_name=faker_ru.last_name(),
-        address=faker_ru.adress(),
+        address=faker_ru.address(),
         phone=faker_ru.phone_number()
     )
 
