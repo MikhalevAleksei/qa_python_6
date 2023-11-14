@@ -25,6 +25,7 @@ class OrderPageLocators:
 
     DATE_FIELD_LOCATOR = \
         [By.XPATH, "//*[@placeholder='* Когда привезти самокат']"]
+    TODAY_DATE_LOCATOR = [By.XPATH, "//*[@tabindex='0']"]
 
     BLACK_COLOR_LOCATOR = [By.ID, "black"]
 

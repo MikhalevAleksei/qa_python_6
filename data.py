@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from helpers import generated_client, choose_rent_period, choose_metro_locator
+from helpers import generated_client, choose_rent_period_locator, choose_metro_locator
 
 
 class Urls:

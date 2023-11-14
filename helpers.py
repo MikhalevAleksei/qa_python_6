@@ -25,7 +25,7 @@ def choose_metro_locator():
     return r_metro_locator
 
 
-def choose_rent_period():
+def choose_rent_period_locator():
     period_locators = (OrderPageLocators.RENT_PERIOD,
                        OrderPageLocators.RENT_2_PERIOD)
     r_period_locator = r.choice(period_locators)
