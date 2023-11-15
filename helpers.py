@@ -10,8 +10,7 @@ Faker.seed()
 
 
 def generated_client():
-    client = Client()
-    yield client(
+    yield Client(
         first_name=faker_ru.first_name(),
         last_name=faker_ru.last_name(),
         address=faker_ru.address(),
