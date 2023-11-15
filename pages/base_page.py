@@ -15,7 +15,6 @@ class BasePage:
         return Wait(self.driver, timeout).until(
             EC.visibility_of_all_elements_located(locator))
 
-
     def click_to_element(self, locator, timeout=5):
         Wait(self.driver, timeout).until(
             EC.element_to_be_clickable(locator))

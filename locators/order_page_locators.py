@@ -2,11 +2,10 @@ from selenium.webdriver.common.by import By
 
 
 class OrderPageLocators:
-    NAME_FLD_LOCATOR = [By.XPATH, "//*[contains(@class, "
-                                    "'Input_Responsible') and text()='* Имя']"]
+    NAME_FLD_LOCATOR = [By.XPATH, "//*[@placeholder='* Имя']"]
     LASTNAME_FLD_LOCATOR = [By.XPATH, "//*[text()='* Фамилия']"]
 
-    ADDRESS_FLD_LOCATOR = [By.XPATH, \
+    ADDRESS_FLD_LOCATOR = [By.XPATH,
                             "//*[text()='* Адрес: куда привезти заказ']"]
 
     METRO_FLD_LOCATOR = [By.XPATH, "//*[@value='Бульвар Рокоссовского']"]
