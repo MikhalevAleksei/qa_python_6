@@ -6,7 +6,7 @@ from data import Urls
 from locators.main_page_locators import MainPageLocators
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--window-size-1920,1080')
