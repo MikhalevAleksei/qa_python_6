@@ -11,3 +11,6 @@ class MainPageLocators:
     YANDEX_LOGO_LOCATOR = [By.XPATH, "//*[@alt= 'Yandex']"]
     SCOOTER_LOGO_LOCATOR = [By.XPATH, "//*[@alt= 'Scooter']"]
     DZEN_LOGO_LOCATOR = [By.XPATH, "//*[@data-testid= 'logo']"]
+
+    BTN_UPPER_ORDER = [By.XPATH, "//button[text()='Заказать']"]
+

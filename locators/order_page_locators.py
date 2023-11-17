@@ -14,7 +14,6 @@ class OrderPageLocators:
     PHONE_FLD_LOCATOR = \
         [By.XPATH, "//*[@placeholder='* Телефон: на него позвонит курьер']"]
 
-
     BUTTON_FURTHER = [By.XPATH, "//*[text()='Далее']"]
 
     RENT_PERIOD_FIELD = [By.XPATH, "//*[text()='* Срок аренды']"]
@@ -37,4 +36,7 @@ class OrderPageLocators:
         [By.XPATH, "//button[contains(@class, Button_Middle') \
                     and text()='Заказать']"]
 
-    ORDER_WINDOW = [By.XPATH, "//*[text()='Хотите оформить заказ?']"]
+    BTN_YES_ORDER_WINDOW = [By.XPATH, "//button[text()='Да']"]
+    SUCCESS_ORDER_WINDOW = [By.XPATH, "//*[text()='Заказ оформлен']"]
+
+

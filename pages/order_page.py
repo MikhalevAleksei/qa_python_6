@@ -3,11 +3,15 @@ import allure
 from helpers import generated_client, \
                     choose_rent_period_locator, \
                     choose_metro_locator
+from locators.main_page_locators import MainPageLocators
 from locators.order_page_locators import OrderPageLocators
 from pages.base_page import BasePage
 
 
 class OrderPage(BasePage):
+    @allure.step("click on upper button order")
+    def upper_btn_order_click(self):
+        self.click_to_element(MainPageLocators.BTN_UPPER_ORDER)
 
     @allure.step("Fill name field")
     def set_name_to_field(self, text):
@@ -54,9 +58,13 @@ class OrderPage(BasePage):
     def click_to_order_button(self):
         self.click_to_element(OrderPageLocators.FINAL_ORDER_BUTTON)
 
+    @allure.step("click to button yes at order window")
+    def click_btn_yes(self):
+        self.click_to_element(OrderPageLocators.BTN_YES_ORDER_WINDOW)
+
     @allure.step("Check pop-up order window")
     def check_success_order(self):
-        return self.find_my_element(OrderPageLocators.ORDER_WINDOW)
+        return self.find_my_element(OrderPageLocators.SUCCESS_ORDER_WINDOW)
 
     @allure.step("Create order")
     def create_order(self):
@@ -66,6 +74,7 @@ class OrderPage(BasePage):
         address = gen_data.address
         phone = gen_data.phone
 
+        self.upper_btn_order_click()
         self.set_name_to_field(first_name)
         self.set_lastname_to_field(last_name)
         self.set_address_to_field(address)
@@ -76,3 +85,5 @@ class OrderPage(BasePage):
         self.set_period_of_rent_to_field()
         self.set_black_color()
         self.click_to_order_button()
+        self.click_btn_yes()
+
