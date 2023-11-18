@@ -5,6 +5,7 @@ from selenium import webdriver
 from data import Urls
 from locators.main_page_locators import MainPageLocators
 from pages.main_page import MainPage
+from pages.order_page import OrderPage
 
 
 @pytest.fixture(scope='function')
@@ -22,6 +23,12 @@ def driver():
 @pytest.fixture(scope='function')
 def main_page():
     page = MainPage(driver)
+    return page
+
+
+@pytest.fixture(scope='function')
+def order_page():
+    page = OrderPage(driver)
     return page
 
 

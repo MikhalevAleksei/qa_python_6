@@ -26,3 +26,8 @@ class BasePage:
     def get_text_from_element(self, locator):
         text_element = self.driver.find_element(*locator).text
         return text_element
+
+    def transit_to_another_page(self):
+        window_after = self.driver.window_handles[1]
+        self.driver.switch_to.window(window_after)
+

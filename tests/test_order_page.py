@@ -1,10 +1,9 @@
 import allure
 
-from pages.order_page import OrderPage
-
 
 class TestOrderPage:
     @allure.title('check creating order')
-    def test_create_order_success(self, driver):
-        OrderPage(driver).create_order()
-        assert OrderPage(driver).check_success_order()
+    def test_create_order_success(self, driver, order_page):
+        order_page.create_order()
+        assert order_page.check_success_order()
+
